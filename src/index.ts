@@ -1,6 +1,5 @@
-import Questao1 from './Atividade1/questao1';
-let teste = new Questao1(6,3,4)
-console.log(teste.Dobro());
-console.log(teste.Area())
-console.log(teste.quemEmaior());
-console.log(teste.descontoProduto(100,25))
+import {dobro, area, desconto, qualMaior} from "./Atividade1/atividade1";
+console.log(dobro(2))
+console.log(area(2,3))
+console.log(desconto(10,50))
+console.log(qualMaior(1,3,2))
