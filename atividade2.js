@@ -11,9 +11,29 @@ let notas=(nota1, nota2)=>{
 let controleFaltas =(faltas)=>{
     return faltas>= 0;
 }
+let cadastro = (nome, idade, notas, quantidadeFaltas)=>{
+    try {
+        return !(idade == null || notas == null || quantidadeFaltas == null);
+    }catch (error){
+    console.error('O ocorreu um erro', error.message);
+    return 'Erro';
+    }
+}
+let media = (nota1, nota2) =>{
+    return (nota1 + nota2)/2
+}
+let mediaResultado =(nota1, nota2)=>{
+    if ((nota1+nota2)/ 2 >= 6.0){
+        return 'Aprovado';
+    }
+    return 'Reprovado';
+}
 module.exports = {
     nomeMinimo: nomeMinimo,
     idadeMinima: idadeMinima,
     notas: notas,
-    controle: controleFaltas
+    controle: controleFaltas,
+    cadastro: cadastro,
+    media: media,
+    mediaResultado: mediaResultado
 }
